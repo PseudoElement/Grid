@@ -1,0 +1,229 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a :focus, a :active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button ::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a :visited {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+header {
+  background: rgb(121, 71, 25);
+  padding: 1% 5%;
+  max-width: 100%;
+}
+header .header_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .header_wrapper a {
+  color: white;
+}
+header .header_wrapper :nth-child(1) {
+  background: white;
+  border-radius: 100px;
+  min-width: 50px;
+  min-height: 50px;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+main {
+  padding: 3% 10%;
+  background: rgb(255, 154, 250);
+}
+main .main_wrapper {
+  max-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 0.5% 2fr 0.5% 2fr 0.5% 2fr 0.5% 2fr;
+  grid-template-columns: 3fr 2fr 2fr 2fr 2fr;
+  -ms-grid-rows: 1fr 0.5% 1fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr;
+  grid-template-rows: 1fr 1fr repeat(6, 3fr);
+  grid-auto-rows: 3fr;
+  -webkit-column-gap: 0.5%;
+     -moz-column-gap: 0.5%;
+          column-gap: 0.5%;
+  row-gap: 0.5%;
+      grid-template-areas: "menu h1 h1 h1 h1" "menu h2 h2 h2 h2" "menu panda panda river ocean" "menu panda panda river ocean" "menu panda panda beach forest" "menu panda panda beach forest" "menu road mount lion lion" "menu road mount lion lion" "menu iceberg rain lion lion" "menu iceberg rain lion lion";
+}
+main .main_wrapper .menu {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 19;
+  -ms-grid-column: 1;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 5%;
+  line-height: 30px;
+  background: rgb(49, 156, 45);
+  grid-area: menu;
+}
+main .main_wrapper .h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  font-size: 40px;
+  grid-area: h1;
+}
+main .main_wrapper .h2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-area: h2;
+  font-size: 35px;
+  -ms-grid-row-align: end;
+      align-self: end;
+}
+main .main_wrapper .panda {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 7;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: panda;
+  background: url(/images/ПАнеда.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+main .main_wrapper .river {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 7;
+  grid-area: river;
+  background: url(/images/река.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+main .main_wrapper .ocean {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 9;
+  grid-area: ocean;
+  background: url(/images/океан.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+main .main_wrapper .beach {
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 7;
+  grid-area: beach;
+  background: url(/images/пляж.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+main .main_wrapper .forest {
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 9;
+  grid-area: forest;
+  background: url(/images/лес.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+main .main_wrapper .road {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  background: url(/images/хайвей.jpg) no-repeat;
+  background-size: 100% 100%;
+  grid-area: road;
+}
+main .main_wrapper .mount {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  background: url(/images/горы.jpg) no-repeat;
+  background-size: 100% 100%;
+  grid-area: mount;
+}
+main .main_wrapper .iceberg {
+  -ms-grid-row: 17;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  background: url(/images/айсберг.jpg) no-repeat;
+  background-size: 100% 100%;
+  grid-area: iceberg;
+}
+main .main_wrapper .rain {
+  -ms-grid-row: 17;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  background: url(/images/дождь.jpg) no-repeat;
+  background-size: 100% 100%;
+  grid-area: rain;
+}
+main .main_wrapper .lion {
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 7;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 3;
+  background: url(/images/лев.jpg) no-repeat;
+  background-size: 100% 100%;
+  grid-area: lion;
+}
