@@ -135,6 +135,10 @@ main .main_wrapper .h1 {
   -ms-grid-column-span: 7;
   font-size: 40px;
   grid-area: h1;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 main .main_wrapper .h2 {
   -ms-grid-row: 3;
@@ -144,6 +148,8 @@ main .main_wrapper .h2 {
   font-size: 35px;
   -ms-grid-row-align: end;
       align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 main .main_wrapper .panda {
   -ms-grid-row: 5;

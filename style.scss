@@ -53,10 +53,13 @@ main{padding: 3% 10% ;
         }
         .h1{font-size: 40px;
             grid-area: h1;
+            align-self: center;
+            justify-self: center;
         }
         .h2{grid-area: h2;
             font-size: 35px;
-            align-self: end;
+            align-self: end; 
+            justify-self: center;
         }
         .panda{grid-area: panda;
             background: url(/images/ПАнеда.jpg) no-repeat;
