@@ -105,33 +105,49 @@ main {
 }
 main .main_wrapper {
   max-height: 100%;
+}
+main .main_wrapper .menu {
+  min-height: 2200px;
+  padding: 20px 90px 20px 20px;
+  line-height: 30px;
+  background: rgb(49, 156, 45);
+  float: left;
+  margin-right: 2%;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .menu {
+    min-height: 1800px;
+    padding: 20px 70px 20px 20px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .menu {
+    min-height: 1600px;
+    padding: 20px 50px 20px 20px;
+    line-height: 22px;
+  }
+}
+main .main_wrapper .photos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 0.5% 2fr 0.5% 2fr 0.5% 2fr 0.5% 2fr;
-  grid-template-columns: 3fr 2fr 2fr 2fr 2fr;
-  -ms-grid-rows: 1fr 0.5% 1fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr;
-  grid-template-rows: 1fr 1fr repeat(6, 3fr);
-  grid-auto-rows: 3fr;
+  -ms-grid-columns: 2fr 0.5% 2fr 0.5% 2fr 0.5% 2fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  -ms-grid-rows: 1fr 0.5% 1fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr;
+  grid-template-rows: 1fr 1fr repeat(8, 3fr);
+  grid-auto-rows: 4fr;
   -webkit-column-gap: 0.5%;
      -moz-column-gap: 0.5%;
           column-gap: 0.5%;
   row-gap: 0.5%;
-      grid-template-areas: "menu h1 h1 h1 h1" "menu h2 h2 h2 h2" "menu panda panda river ocean" "menu panda panda river ocean" "menu panda panda beach forest" "menu panda panda beach forest" "menu road mount lion lion" "menu road mount lion lion" "menu iceberg rain lion lion" "menu iceberg rain lion lion";
+      grid-template-areas: "h1 h1 h1 h1" "h2 h2 h2 h2" "panda panda river ocean" "panda panda river ocean" "panda panda beach forest" "panda panda beach forest" "road mount lion lion" "road mount lion lion" "iceberg rain lion lion" "iceberg rain lion lion";
 }
-main .main_wrapper .menu {
+main .main_wrapper .photos div {
+  border: dashed 2px gray;
+}
+main .main_wrapper .photos .h1 {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 19;
   -ms-grid-column: 1;
-  padding: 20px;
-  margin-left: 10%;
-  margin-right: 5%;
-  line-height: 30px;
-  background: rgb(49, 156, 45);
-  grid-area: menu;
-}
-main .main_wrapper .h1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   -ms-grid-column-span: 7;
   font-size: 40px;
   grid-area: h1;
@@ -140,9 +156,9 @@ main .main_wrapper .h1 {
   -ms-grid-column-align: center;
       justify-self: center;
 }
-main .main_wrapper .h2 {
+main .main_wrapper .photos .h2 {
   -ms-grid-row: 3;
-  -ms-grid-column: 3;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: h2;
   font-size: 35px;
@@ -151,85 +167,224 @@ main .main_wrapper .h2 {
   -ms-grid-column-align: center;
       justify-self: center;
 }
-main .main_wrapper .panda {
+main .main_wrapper .photos .panda {
   -ms-grid-row: 5;
   -ms-grid-row-span: 7;
-  -ms-grid-column: 3;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: panda;
   background: url(/images/ПАнеда.jpg) no-repeat;
   background-size: 100% 100%;
 }
-main .main_wrapper .river {
+main .main_wrapper .photos .river {
   -ms-grid-row: 5;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 7;
+  -ms-grid-column: 5;
   grid-area: river;
   background: url(/images/река.jpg) no-repeat;
   background-size: 100% 100%;
 }
-main .main_wrapper .ocean {
+main .main_wrapper .photos .ocean {
   -ms-grid-row: 5;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 9;
+  -ms-grid-column: 7;
   grid-area: ocean;
   background: url(/images/океан.jpg) no-repeat;
   background-size: 100% 100%;
 }
-main .main_wrapper .beach {
+main .main_wrapper .photos .beach {
   -ms-grid-row: 9;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 7;
+  -ms-grid-column: 5;
   grid-area: beach;
   background: url(/images/пляж.jpg) no-repeat;
   background-size: 100% 100%;
 }
-main .main_wrapper .forest {
+main .main_wrapper .photos .forest {
   -ms-grid-row: 9;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 9;
+  -ms-grid-column: 7;
   grid-area: forest;
   background: url(/images/лес.jpg) no-repeat;
   background-size: 100% 100%;
 }
-main .main_wrapper .road {
+main .main_wrapper .photos .road {
   -ms-grid-row: 13;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
+  -ms-grid-column: 1;
   background: url(/images/хайвей.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: road;
 }
-main .main_wrapper .mount {
+main .main_wrapper .photos .mount {
   -ms-grid-row: 13;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 5;
+  -ms-grid-column: 3;
   background: url(/images/горы.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: mount;
 }
-main .main_wrapper .iceberg {
+main .main_wrapper .photos .iceberg {
   -ms-grid-row: 17;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
+  -ms-grid-column: 1;
   background: url(/images/айсберг.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: iceberg;
 }
-main .main_wrapper .rain {
+main .main_wrapper .photos .rain {
   -ms-grid-row: 17;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 5;
+  -ms-grid-column: 3;
   background: url(/images/дождь.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: rain;
 }
-main .main_wrapper .lion {
+main .main_wrapper .photos .lion {
   -ms-grid-row: 13;
   -ms-grid-row-span: 7;
-  -ms-grid-column: 7;
+  -ms-grid-column: 5;
   -ms-grid-column-span: 3;
   background: url(/images/лев.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: lion;
+}
+main .main_wrapper .shop {
+  margin-top: 2%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2% 1fr 2% 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 2% 2fr 2% 6fr 2% 2fr 2% 6fr;
+  grid-template-rows: 1fr 2fr 6fr 2fr 6fr;
+      grid-template-areas: "goods goods goods" "slot1 slot2 slot3" "slot1 slot2 slot3" "slot4 slot5 slot6" "slot4 slot5 slot6";
+  gap: 2%;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .shop {
+    -ms-grid-rows: 1fr 2fr 4fr 2fr 4fr;
+    grid-template-rows: 1fr 2fr 4fr 2fr 4fr;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .shop {
+    -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+  }
+}
+main .main_wrapper .shop div {
+  border: dashed 2px gray;
+}
+main .main_wrapper .shop .goods {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  margin-bottom: 10px;
+  grid-area: goods;
+  font-size: 45px;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .shop .goods {
+    font-size: 35px;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .shop .goods {
+    font-size: 25px;
+  }
+}
+main .main_wrapper .shop .slot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .shop .slot p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .shop .slot p {
+    font-size: 12px;
+  }
+}
+main .main_wrapper .shop .slot button {
+  padding: 5px 50px;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .shop .slot button {
+    padding: 4px 40px;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .shop .slot button {
+    -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    padding: 3px 30px;
+  }
+}
+main .main_wrapper .shop .slot img {
+  max-height: 320px;
+  max-width: 320px;
+}
+@media (max-width: 1350px) {
+  main .main_wrapper .shop .slot img {
+    max-width: 220px;
+    max-height: 220px;
+  }
+}
+@media (max-width: 1015px) {
+  main .main_wrapper .shop .slot img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+main .main_wrapper .shop .slot.slot1 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: slot1;
+}
+main .main_wrapper .shop .slot.slot2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: slot2;
+}
+main .main_wrapper .shop .slot.slot3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  grid-area: slot3;
+}
+main .main_wrapper .shop .slot.slot4 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: slot4;
+}
+main .main_wrapper .shop .slot.slot5 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: slot5;
+}
+main .main_wrapper .shop .slot.slot6 {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 5;
+  grid-area: slot6;
 }

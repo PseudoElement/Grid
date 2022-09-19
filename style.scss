@@ -1,16 +1,20 @@
 @import "null.scss";
 
-header{background: rgb(121, 71, 25);
+header {
+    background: rgb(121, 71, 25);
     padding: 1% 5%;
     max-width: 100%;
-    .header_wrapper{
+
+    .header_wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        a{
+
+        a {
             color: white;
         }
-        :nth-child(1){
+
+        :nth-child(1) {
             background: white;
             border-radius: 100px;
             min-width: 50px;
@@ -21,86 +25,219 @@ header{background: rgb(121, 71, 25);
 
     }
 }
-main{padding: 3% 10% ;
+
+main {
+    padding: 3% 10%;
     background: rgb(255, 154, 250);
-    .main_wrapper{max-height: 100%;
+
+    .main_wrapper {
+        max-height: 100%;
+
         //border: black solid 3px;
-        display: grid;
-        grid-template-columns: 3fr 2fr 2fr 2fr 2fr;
-        grid-template-rows: 1fr 1fr repeat(6, 3fr);
-        grid-auto-rows: 3fr;
-        column-gap: 0.5%;
-        row-gap: 0.5%;
-        grid-template-areas: "menu h1 h1 h1 h1"
-                             "menu h2 h2 h2 h2"
-                             "menu panda panda river ocean"
-                             "menu panda panda river ocean"
-                             "menu panda panda beach forest"
-                             "menu panda panda beach forest"
-                             "menu road mount lion lion"
-                             "menu road mount lion lion"
-                             "menu iceberg rain lion lion"
-                             "menu iceberg rain lion lion";
-        div{
-            //border: dashed 2px gray;
-        }
-        .menu{padding: 20px;
-            margin-left: 10%;
-            margin-right: 5%;
+        .menu {min-height: 2200px;
+            padding: 20px 90px 20px 20px;
             line-height: 30px;
             background: rgb(49, 156, 45);
-            grid-area: menu;
+            float: left;
+            margin-right: 2%;
+            @media (max-width:1350px){
+                min-height:1800px ;
+                padding: 20px 70px 20px 20px;
+                line-height: 25px;
+            }
+            @media (max-width:1015px){
+                min-height: 1600px;
+                padding: 20px 50px 20px 20px;
+                line-height: 22px;
+            }
         }
-        .h1{font-size: 40px;
-            grid-area: h1;
-            align-self: center;
-            justify-self: center;
-        }
-        .h2{grid-area: h2;
-            font-size: 35px;
-            align-self: end; 
-            justify-self: center;
-        }
-        .panda{grid-area: panda;
-            background: url(/images/ПАнеда.jpg) no-repeat;
-            background-size: 100% 100%;
-        }
-        .river{grid-area: river;
-            background: url(/images/река.jpg) no-repeat;
-            background-size: 100% 100%;
-        }
-        .ocean{grid-area: ocean;
-            background: url(/images/океан.jpg) no-repeat;
-            background-size: 100% 100%;
-        }
-        .beach{grid-area: beach;
-            background: url(/images/пляж.jpg) no-repeat;
-            background-size: 100% 100%;
-        }
-        .forest{grid-area: forest;
-            background: url(/images/лес.jpg) no-repeat;
-            background-size: 100% 100%;
-        }
-        .road{background: url(/images/хайвей.jpg) no-repeat;
-            background-size: 100% 100%;
-            grid-area: road;
-        }
-        .mount{background: url(/images/горы.jpg) no-repeat;
-            background-size: 100% 100%;
-            grid-area: mount;
-        }
-        .iceberg{background: url(/images/айсберг.jpg) no-repeat;
-            background-size: 100% 100%;
-            grid-area: iceberg;
-        }
-        .rain{background: url(/images/дождь.jpg) no-repeat;
-            background-size: 100% 100%;
-            grid-area: rain;
-        }
-        .lion{background: url(/images/лев.jpg) no-repeat;
-            background-size: 100% 100%;
-            grid-area: lion;
 
+        .photos {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr;
+            grid-template-rows: 1fr 1fr repeat(8, 3fr);
+            grid-auto-rows: 4fr;
+            column-gap: 0.5%;
+            row-gap: 0.5%;
+            grid-template-areas: "h1 h1 h1 h1"
+                "h2 h2 h2 h2"
+                "panda panda river ocean"
+                "panda panda river ocean"
+                "panda panda beach forest"
+                "panda panda beach forest"
+                "road mount lion lion"
+                "road mount lion lion"
+                "iceberg rain lion lion"
+                "iceberg rain lion lion";
+
+            div {
+                border: dashed 2px gray;
+            }
+
+            .h1 {
+                font-size: 40px;
+                grid-area: h1;
+                align-self: center;
+                justify-self: center;
+            }
+
+            .h2 {
+                grid-area: h2;
+                font-size: 35px;
+                align-self: end;
+                justify-self: center;
+            }
+
+            .panda {
+                grid-area: panda;
+                background: url(/images/ПАнеда.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .river {
+                grid-area: river;
+                background: url(/images/река.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .ocean {
+                grid-area: ocean;
+                background: url(/images/океан.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .beach {
+                grid-area: beach;
+                background: url(/images/пляж.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .forest {
+                grid-area: forest;
+                background: url(/images/лес.jpg) no-repeat;
+                background-size: 100% 100%;
+            }
+
+            .road {
+                background: url(/images/хайвей.jpg) no-repeat;
+                background-size: 100% 100%;
+                grid-area: road;
+            }
+
+            .mount {
+                background: url(/images/горы.jpg) no-repeat;
+                background-size: 100% 100%;
+                grid-area: mount;
+            }
+
+            .iceberg {
+                background: url(/images/айсберг.jpg) no-repeat;
+                background-size: 100% 100%;
+                grid-area: iceberg;
+            }
+
+            .rain {
+                background: url(/images/дождь.jpg) no-repeat;
+                background-size: 100% 100%;
+                grid-area: rain;
+            }
+
+            .lion {
+                background: url(/images/лев.jpg) no-repeat;
+                background-size: 100% 100%;
+                grid-area: lion;
+            }
+
+            
         }
+        .shop{margin-top: 2%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 2fr 6fr 2fr 6fr;
+            grid-template-areas: "goods goods goods"
+                                "slot1 slot2 slot3"
+                                "slot1 slot2 slot3"
+                                "slot4 slot5 slot6"
+                                "slot4 slot5 slot6";
+            gap: 2%;
+            @media (max-width:1350px){
+                grid-template-rows: 1fr 2fr 4fr 2fr 4fr;
+            }
+            @media (max-width:1015px){
+                grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+            }
+
+            div{
+                border: dashed 2px gray;
+            }
+            .goods {margin-bottom: 10px;
+                grid-area: goods;
+                font-size: 45px;
+                align-self: center;
+                justify-self: center;
+                @media (max-width:1350px){
+                    font-size: 35px;
+                }
+                @media (max-width:1015px){
+                    font-size: 25px;
+                }
+            }
+            .slot {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                p{
+                    @media (max-width:1350px){
+                        font-size: 14px;
+                    }
+                    @media (max-width:1015px){
+                        font-size: 12px;
+                    }
+                }
+                button {
+                    padding: 5px 50px;
+                    @media (max-width:1350px){
+                        padding: 4px 40px;
+                    }
+                    @media (max-width:1015px){
+                        grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+                        padding: 3px 30px;
+                    }
+                }
+
+                img {
+                    max-height: 320px;
+                    max-width: 320px;
+                    @media (max-width:1350px){
+                        max-width: 220px;
+                        max-height: 220px;
+                    }
+                    @media (max-width:1015px){
+                        max-width: 150px;
+                        max-height: 150px;
+                    }
+                }
+
+                &.slot1 {grid-area: slot1;
+                }
+
+                &.slot2 {grid-area: slot2;
+                }
+
+                &.slot3 {grid-area: slot3;
+                }
+                &.slot4{
+                    grid-area: slot4;
+                }
+                &.slot5{
+                    grid-area: slot5;
+                }
+                &.slot6{
+                    grid-area: slot6;
+                }
+            }
+        }
+
     }
 }
