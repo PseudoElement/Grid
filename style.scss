@@ -29,26 +29,46 @@ header {
 main {
     padding: 3% 10%;
     background: rgb(255, 154, 250);
+    max-height: 100%;
 
     .main_wrapper {
         max-height: 100%;
 
         //border: black solid 3px;
-        .menu {min-height: 2000px;
+        .menu {
+            min-height: 2080px;
             padding: 20px 90px 20px 20px;
             line-height: 30px;
             background: rgb(49, 156, 45);
             float: left;
             margin-right: 2%;
-            @media (max-width:1350px){
-                min-height:1800px ;
+
+            @media (max-width:1400px) {
+                min-height: 1580px;
                 padding: 20px 70px 20px 20px;
                 line-height: 25px;
             }
-            @media (max-width:1015px){
-                min-height: 1600px;
+
+            @media (max-width:1015px) {
+                min-height: 1070px;
                 padding: 20px 50px 20px 20px;
                 line-height: 22px;
+            }
+
+            @media (max-width:750px) {
+                min-height: 1600px;
+                padding: 0;
+            }
+
+            @media (max-width:440px) {
+                min-height: 1600px;
+            }
+            @media (max-width:417px){
+                min-height: 1900px;
+            }
+
+            @media (max-width:355px) {
+                min-height: 2150px;
             }
         }
 
@@ -70,6 +90,64 @@ main {
                 "iceberg rain lion lion"
                 "iceberg rain lion lion";
 
+            @media (max-width:1015px) {
+                grid-template-columns: repeat(4, 120px);
+                grid-template-rows: 1fr 1fr repeat(8, 2fr);
+            }
+
+            @media (max-width:750px) {
+                grid-template-columns: repeat(2, 200px);
+                grid-template-rows: 1fr 1fr repeat(16, 2fr);
+                grid-template-areas: "h1 h1"
+                    "h2 h2"
+                    "panda panda"
+                    "panda panda"
+                    "panda panda"
+                    "panda panda"
+                    "river ocean"
+                    "river ocean"
+                    "beach forest"
+                    "beach forest"
+                    "lion lion"
+                    "lion lion"
+                    "lion lion"
+                    "lion lion"
+                    "road mount"
+                    "road mount"
+                    "iceberg rain"
+                    "iceberg rain";
+
+            }
+            @media (max-width:600px){
+                grid-template-columns: repeat(2, 160px);
+            }
+
+            @media (max-width:505px) {
+                grid-template-columns: repeat(2, 120px);
+            }
+
+            @media (max-width:405px) {
+                grid-template-columns: repeat(2, 100px);
+            }
+
+            @media (max-width:355px) {
+                grid-template-columns: 150px;
+                grid-template-rows: 1fr 1fr repeat(10, 6fr);
+                grid-template-areas: "h1"
+                    "h2"
+                    "panda"
+                    "river"
+                    "ocean"
+                    "beach"
+                    "forest"
+                    "lion"
+                    "road"
+                    "mount"
+                    "iceberg"
+                    "rain";
+            }
+
+
             div {
                 //border: dashed 2px gray;
             }
@@ -78,14 +156,53 @@ main {
                 font-size: 40px;
                 grid-area: h1;
                 align-self: center;
-                justify-self: center;
+                justify-self: start;
+
+                @media (max-width:1400px) {
+                    font-size: 35px;
+                }
+
+                @media (max-width:1015px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:750px) {
+                    font-size: 25px;
+                }
+
+                @media (max-width:417px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width:355px) {
+                    margin: 0;
+                    padding: 0;
+                    line-height: 15px;
+                    font-size: 15px;
+                }
             }
 
             .h2 {
                 grid-area: h2;
                 font-size: 35px;
                 align-self: end;
-                justify-self: center;
+                justify-self: start;
+
+                @media (max-width:1400px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width:1015px) {
+                    font-size: 25px;
+                }
+
+                @media (max-width:750px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width:417px) {
+                    font-size: 15px;
+                }
             }
 
             .panda {
@@ -148,59 +265,107 @@ main {
                 grid-area: lion;
             }
 
-            
+
         }
-        .shop{margin-top: 2%;
+
+        .shop {
+            margin-top: 2%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 2fr 6fr 2fr 6fr;
             grid-template-areas: "goods goods goods"
-                                "slot1 slot2 slot3"
-                                "slot1 slot2 slot3"
-                                "slot4 slot5 slot6"
-                                "slot4 slot5 slot6";
+                "slot1 slot2 slot3"
+                "slot1 slot2 slot3"
+                "slot4 slot5 slot6"
+                "slot4 slot5 slot6";
             gap: 2%;
-            @media (max-width:1350px){
+
+            @media (max-width:1400px) {
                 grid-template-rows: 1fr 2fr 4fr 2fr 4fr;
             }
-            @media (max-width:1015px){
-                grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+
+            @media (max-width:1015px) {
+                grid-template-rows: 1fr 2fr 4fr 2fr 4fr;
             }
 
-            div{
-                //border: dashed 2px gray;
+            @media (max-width:750px) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "goods goods"
+                    "slot1 slot2"
+                    "slot1 slot2"
+                    "slot3 slot4"
+                    "slot3 slot4"
+                    "slot5 slot6"
+                    "slot5 slot6";
+                gap: 5%;
+                grid-template-rows: 1fr 3fr 3fr 3fr 3fr 3fr 3fr;
+
             }
-            .goods {margin-bottom: 10px;
+
+            @media (max-width:417px) {
+                grid-template-columns: 90px 90px;
+                grid-template-areas: "goods goods "
+                    "slot1 slot1"
+                    "slot1 slot1"
+                    "slot2 slot2"
+                    "slot2 slot2"
+                    "slot3 slot3"
+                    "slot3 slot3"
+                    "slot4 slot4"
+                    "slot4 slot4"
+                    "slot5 slot5"
+                    "slot5 slot5"
+                    "slot6 slot6"
+                    "slot6 slot6";
+                gap: 1%;
+                grid-template-rows: 1fr repeat(12, 2.5fr);
+            }
+
+
+            div {
+                border: dashed 2px gray;
+            }
+
+            .goods {
+                margin-bottom: 10px;
                 grid-area: goods;
                 font-size: 45px;
                 align-self: center;
-                justify-self: center;
-                @media (max-width:1350px){
+                justify-self: start;
+
+                @media (max-width:1400px) {
                     font-size: 35px;
                 }
-                @media (max-width:1015px){
+
+                @media (max-width:1015px) {
                     font-size: 25px;
                 }
             }
+
             .slot {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
-                p{
-                    @media (max-width:1350px){
+
+                p {
+                    @media (max-width:1400px) {
                         font-size: 14px;
                     }
-                    @media (max-width:1015px){
+
+                    @media (max-width:1015px) {
                         font-size: 12px;
                     }
                 }
+
                 button {
                     padding: 5px 50px;
-                    @media (max-width:1350px){
+
+                    @media (max-width:1400px) {
                         padding: 4px 40px;
                     }
-                    @media (max-width:1015px){
+
+                    @media (max-width:1015px) {
                         grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
                         padding: 3px 30px;
                     }
@@ -209,31 +374,48 @@ main {
                 img {
                     max-height: 320px;
                     max-width: 320px;
-                    @media (max-width:1350px){
+
+                    @media (max-width:1400px) {
                         max-width: 220px;
                         max-height: 220px;
                     }
-                    @media (max-width:1015px){
+
+                    @media (max-width:1015px) {
                         max-width: 150px;
                         max-height: 150px;
                     }
+
+                    @media (max-width:750px) {
+                        max-width: 130px;
+                        max-height: 130px;
+                    }
+                    @media (max-width:445px){
+                        max-width: 115px;
+                        max-height: 115px;
+                    }
                 }
 
-                &.slot1 {grid-area: slot1;
+                &.slot1 {
+                    grid-area: slot1;
                 }
 
-                &.slot2 {grid-area: slot2;
+                &.slot2 {
+                    grid-area: slot2;
                 }
 
-                &.slot3 {grid-area: slot3;
+                &.slot3 {
+                    grid-area: slot3;
                 }
-                &.slot4{
+
+                &.slot4 {
                     grid-area: slot4;
                 }
-                &.slot5{
+
+                &.slot5 {
                     grid-area: slot5;
                 }
-                &.slot6{
+
+                &.slot6 {
                     grid-area: slot6;
                 }
             }
