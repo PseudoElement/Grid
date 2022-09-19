@@ -107,7 +107,7 @@ main .main_wrapper {
   max-height: 100%;
 }
 main .main_wrapper .menu {
-  min-height: 2200px;
+  min-height: 2000px;
   padding: 20px 90px 20px 20px;
   line-height: 30px;
   background: rgb(49, 156, 45);
@@ -141,9 +141,6 @@ main .main_wrapper .photos {
           column-gap: 0.5%;
   row-gap: 0.5%;
       grid-template-areas: "h1 h1 h1 h1" "h2 h2 h2 h2" "panda panda river ocean" "panda panda river ocean" "panda panda beach forest" "panda panda beach forest" "road mount lion lion" "road mount lion lion" "iceberg rain lion lion" "iceberg rain lion lion";
-}
-main .main_wrapper .photos div {
-  border: dashed 2px gray;
 }
 main .main_wrapper .photos .h1 {
   -ms-grid-row: 1;
@@ -271,9 +268,6 @@ main .main_wrapper .shop {
     -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr;
     grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
   }
-}
-main .main_wrapper .shop div {
-  border: dashed 2px gray;
 }
 main .main_wrapper .shop .goods {
   -ms-grid-row: 1;
