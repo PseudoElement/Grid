@@ -691,9 +691,6 @@ main .main_wrapper .shop {
     grid-template-rows: 1fr repeat(12, 2.5fr);
   }
 }
-main .main_wrapper .shop div {
-  border: dashed 2px gray;
-}
 main .main_wrapper .shop .goods {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
