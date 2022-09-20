@@ -90,7 +90,7 @@ main {
                 "iceberg rain lion lion"
                 "iceberg rain lion lion";
 
-            @media (max-width:1015px) {
+            @media (max-width:1015px)  {
                 grid-template-columns: repeat(4, 120px);
                 grid-template-rows: 1fr 1fr repeat(8, 2fr);
             }
@@ -207,60 +207,60 @@ main {
 
             .panda {
                 grid-area: panda;
-                background: url(/images/ПАнеда.jpg) no-repeat;
+                background: url(./images/ПАнеда.jpg) no-repeat;
                 background-size: 100% 100%;
             }
 
             .river {
                 grid-area: river;
-                background: url(/images/река.jpg) no-repeat;
+                background: url(./images/река.jpg) no-repeat;
                 background-size: 100% 100%;
             }
 
             .ocean {
                 grid-area: ocean;
-                background: url(/images/океан.jpg) no-repeat;
+                background: url(./images/океан.jpg) no-repeat;
                 background-size: 100% 100%;
             }
 
             .beach {
                 grid-area: beach;
-                background: url(/images/пляж.jpg) no-repeat;
+                background: url(./images/пляж.jpg) no-repeat;
                 background-size: 100% 100%;
             }
 
             .forest {
                 grid-area: forest;
-                background: url(/images/лес.jpg) no-repeat;
+                background: url(./images/лес.jpg) no-repeat;
                 background-size: 100% 100%;
             }
 
             .road {
-                background: url(/images/хайвей.jpg) no-repeat;
+                background: url(./images/хайвей.jpg) no-repeat;
                 background-size: 100% 100%;
                 grid-area: road;
             }
 
             .mount {
-                background: url(/images/горы.jpg) no-repeat;
+                background: url(./images/горы.jpg) no-repeat;
                 background-size: 100% 100%;
                 grid-area: mount;
             }
 
             .iceberg {
-                background: url(/images/айсберг.jpg) no-repeat;
+                background: url(./images/айсберг.jpg) no-repeat;
                 background-size: 100% 100%;
                 grid-area: iceberg;
             }
 
             .rain {
-                background: url(/images/дождь.jpg) no-repeat;
+                background: url(./images/дождь.jpg) no-repeat;
                 background-size: 100% 100%;
                 grid-area: rain;
             }
 
             .lion {
-                background: url(/images/лев.jpg) no-repeat;
+                background: url(./images/лев.jpg) no-repeat;
                 background-size: 100% 100%;
                 grid-area: lion;
             }
