@@ -579,10 +579,10 @@ main .main_wrapper .photos {
   }
 }
 main .main_wrapper .photos div:hover:not(:nth-child(1), :nth-child(2)) {
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-  -webkit-transform: rotate(360deg) scale(1.2);
-          transform: rotate(360deg) scale(1.2);
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 main .main_wrapper .photos .h1 {
   -ms-grid-row: 1;

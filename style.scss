@@ -171,8 +171,8 @@ main {
             div { 
                 //border: dashed 2px gray;
                 &:hover:not(:nth-child(1), :nth-child(2)){
-                    transition: 1.5s;
-                    transform: rotate(360deg) scale(1.2);
+                    transition: 0.75s;
+                    transform: scale(1.2);
                 }
             }
 
