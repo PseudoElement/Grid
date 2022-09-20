@@ -168,10 +168,11 @@ main {
             }
 
 
-            div { transition: 0.5s;
+            div { 
                 //border: dashed 2px gray;
-                &:hover{
-                    transform: scale(1.2);
+                &:hover:not(:nth-child(1), :nth-child(2)){
+                    transition: 1.5s;
+                    transform: rotate(360deg) scale(1.2);
                 }
             }
 
