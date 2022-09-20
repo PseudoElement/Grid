@@ -444,7 +444,7 @@ main .main_wrapper .photos .panda {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: panda;
-  background: url(/images/ПАнеда.jpg) no-repeat;
+  background: url(./images/ПАнеда.jpg) no-repeat;
   background-size: 100% 100%;
 }
 main .main_wrapper .photos .river {
@@ -452,7 +452,7 @@ main .main_wrapper .photos .river {
   -ms-grid-row-span: 3;
   -ms-grid-column: 5;
   grid-area: river;
-  background: url(/images/река.jpg) no-repeat;
+  background: url(./images/река.jpg) no-repeat;
   background-size: 100% 100%;
 }
 main .main_wrapper .photos .ocean {
@@ -460,7 +460,7 @@ main .main_wrapper .photos .ocean {
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   grid-area: ocean;
-  background: url(/images/океан.jpg) no-repeat;
+  background: url(./images/океан.jpg) no-repeat;
   background-size: 100% 100%;
 }
 main .main_wrapper .photos .beach {
@@ -468,7 +468,7 @@ main .main_wrapper .photos .beach {
   -ms-grid-row-span: 3;
   -ms-grid-column: 5;
   grid-area: beach;
-  background: url(/images/пляж.jpg) no-repeat;
+  background: url(./images/пляж.jpg) no-repeat;
   background-size: 100% 100%;
 }
 main .main_wrapper .photos .forest {
@@ -476,14 +476,14 @@ main .main_wrapper .photos .forest {
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   grid-area: forest;
-  background: url(/images/лес.jpg) no-repeat;
+  background: url(./images/лес.jpg) no-repeat;
   background-size: 100% 100%;
 }
 main .main_wrapper .photos .road {
   -ms-grid-row: 13;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  background: url(/images/хайвей.jpg) no-repeat;
+  background: url(./images/хайвей.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: road;
 }
@@ -491,7 +491,7 @@ main .main_wrapper .photos .mount {
   -ms-grid-row: 13;
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
-  background: url(/images/горы.jpg) no-repeat;
+  background: url(./images/горы.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: mount;
 }
@@ -499,7 +499,7 @@ main .main_wrapper .photos .iceberg {
   -ms-grid-row: 17;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  background: url(/images/айсберг.jpg) no-repeat;
+  background: url(./images/айсберг.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: iceberg;
 }
@@ -507,7 +507,7 @@ main .main_wrapper .photos .rain {
   -ms-grid-row: 17;
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
-  background: url(/images/дождь.jpg) no-repeat;
+  background: url(./images/дождь.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: rain;
 }
@@ -516,7 +516,7 @@ main .main_wrapper .photos .lion {
   -ms-grid-row-span: 7;
   -ms-grid-column: 5;
   -ms-grid-column-span: 3;
-  background: url(/images/лев.jpg) no-repeat;
+  background: url(./images/лев.jpg) no-repeat;
   background-size: 100% 100%;
   grid-area: lion;
 }
