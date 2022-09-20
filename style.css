@@ -123,7 +123,7 @@ main .main_wrapper {
   max-height: 100%;
 }
 main .main_wrapper .menu {
-  min-height: 2080px;
+  min-height: 2000px;
   padding: 20px 90px 20px 20px;
   line-height: 30px;
   background: rgb(49, 156, 45);
@@ -132,44 +132,39 @@ main .main_wrapper .menu {
 }
 @media (max-width: 1400px) {
   main .main_wrapper .menu {
-    min-height: 1580px;
+    min-height: 1520px;
     padding: 20px 70px 20px 20px;
     line-height: 25px;
   }
 }
 @media (max-width: 1015px) {
   main .main_wrapper .menu {
-    min-height: 1070px;
+    min-height: 1010px;
     padding: 20px 50px 20px 20px;
     line-height: 22px;
   }
 }
 @media (max-width: 750px) {
   main .main_wrapper .menu {
-    min-height: 1600px;
+    min-height: 1520px;
     padding: 0;
-  }
-}
-@media (max-width: 440px) {
-  main .main_wrapper .menu {
-    min-height: 1600px;
   }
 }
 @media (max-width: 417px) {
   main .main_wrapper .menu {
-    min-height: 1900px;
+    min-height: 1770px;
   }
 }
 @media (max-width: 355px) {
   main .main_wrapper .menu {
-    min-height: 2150px;
+    min-height: 2020px;
   }
 }
 main .main_wrapper .photos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 0.5% 2fr 0.5% 2fr 0.5% 2fr;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  -ms-grid-columns: 250px 0.5% 250px 0.5% 250px 0.5% 250px;
+  grid-template-columns: repeat(4, 250px);
   -ms-grid-rows: 1fr 0.5% 1fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr 0.5% 3fr;
   grid-template-rows: 1fr 1fr repeat(8, 3fr);
   grid-auto-rows: 4fr;
@@ -178,6 +173,18 @@ main .main_wrapper .photos {
           column-gap: 0.5%;
   row-gap: 0.5%;
       grid-template-areas: "h1 h1 h1 h1" "h2 h2 h2 h2" "panda panda river ocean" "panda panda river ocean" "panda panda beach forest" "panda panda beach forest" "road mount lion lion" "road mount lion lion" "iceberg rain lion lion" "iceberg rain lion lion";
+}
+@media (max-width: 1400px) {
+  main .main_wrapper .photos {
+    -ms-grid-columns: (220px)[4];
+    grid-template-columns: repeat(4, 220px);
+  }
+}
+@media (max-width: 1285px) {
+  main .main_wrapper .photos {
+    -ms-grid-columns: (170px)[4];
+    grid-template-columns: repeat(4, 170px);
+  }
 }
 @media (max-width: 1015px) {
   main .main_wrapper .photos {

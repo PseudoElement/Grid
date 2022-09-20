@@ -36,7 +36,7 @@ main {
 
         //border: black solid 3px;
         .menu {
-            min-height: 2080px;
+            min-height: 2000px;
             padding: 20px 90px 20px 20px;
             line-height: 30px;
             background: rgb(49, 156, 45);
@@ -44,37 +44,33 @@ main {
             margin-right: 2%;
 
             @media (max-width:1400px) {
-                min-height: 1580px;
+                min-height: 1520px;
                 padding: 20px 70px 20px 20px;
                 line-height: 25px;
             }
 
             @media (max-width:1015px) {
-                min-height: 1070px;
+                min-height: 1010px;
                 padding: 20px 50px 20px 20px;
                 line-height: 22px;
             }
 
             @media (max-width:750px) {
-                min-height: 1600px;
+                min-height: 1520px;
                 padding: 0;
             }
-
-            @media (max-width:440px) {
-                min-height: 1600px;
-            }
             @media (max-width:417px){
-                min-height: 1900px;
+                min-height: 1770px;
             }
 
             @media (max-width:355px) {
-                min-height: 2150px;
+                min-height: 2020px;
             }
         }
 
         .photos {
             display: grid;
-            grid-template-columns: 2fr 2fr 2fr 2fr;
+            grid-template-columns: repeat(4, 250px);
             grid-template-rows: 1fr 1fr repeat(8, 3fr);
             grid-auto-rows: 4fr;
             column-gap: 0.5%;
@@ -89,7 +85,13 @@ main {
                 "road mount lion lion"
                 "iceberg rain lion lion"
                 "iceberg rain lion lion";
-
+                
+            @media (max-width:1400px)  {
+                grid-template-columns: repeat(4, 220px);
+            }
+            @media (max-width:1285px)  {
+                grid-template-columns: repeat(4, 170px);
+            }
             @media (max-width:1015px)  {
                 grid-template-columns: repeat(4, 120px);
                 grid-template-rows: 1fr 1fr repeat(8, 2fr);
