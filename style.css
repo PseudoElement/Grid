@@ -91,6 +91,22 @@ header {
   padding: 1% 5%;
   max-width: 100%;
 }
+@media (max-width: 1015px) {
+  header {
+    line-height: 22px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    font-size: 13px;
+  }
+}
+@media (max-width: 355px) {
+  header {
+    font-size: 10px;
+  }
+}
 header .header_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -561,6 +577,14 @@ main .main_wrapper .photos {
     grid-template-rows: 1fr 1fr repeat(10, 6fr);
         grid-template-areas: "h1" "h2" "panda" "river" "ocean" "beach" "forest" "lion" "road" "mount" "iceberg" "rain";
   }
+}
+main .main_wrapper .photos div {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .main_wrapper .photos div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 main .main_wrapper .photos .h1 {
   -ms-grid-row: 1;
